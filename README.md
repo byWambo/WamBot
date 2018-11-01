@@ -1,6 +1,6 @@
 <div align=center>
-    <h1>WamBot<h2>
-    <strong>Maybe a nice Discord bot<strong>
+    <h1>WamBot</h1>
+    <strong>Maybe a nice Discord bot</strong>
 </div>
 
 # You want to help me?
