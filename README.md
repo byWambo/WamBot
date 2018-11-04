@@ -1,11 +1,12 @@
+[![GitHub](https://img.shields.io/github/license/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/pulls)
+
 <div align=center>
     <h1>WamBot</h1>
     <strong>Maybe a nice Discord bot</strong>
 </div>
 
-[![GitHub](https://img.shields.io/github/license/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/pulls)
 
 # You want to help me?
 Feel free to commit or create a PR. If you got some questions, just add me on Discord: Wambo#0800
