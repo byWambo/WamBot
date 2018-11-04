@@ -15,3 +15,14 @@ class Guild:
             color=discord.Color.blue()
         )
         return embed
+
+
+class Ping:
+
+    @staticmethod
+    def get(decode):
+        embed = discord.Embed(
+            description=f"Ping: **{decode}**",
+            color=discord.Color.blue()
+        )
+        return embed
