@@ -1,5 +1,5 @@
 import subprocess
-import asyncio
+import discord
 from discord.ext import commands
 from utils import embeds
 
@@ -17,7 +17,7 @@ class Basic:
     async def say(self, ctx, *text):
         if not text:
             return await ctx.send("This command requires arguments on what to say.")
-        await ctx.send(" ".join(text))
+        await ctx.send(embed=discord.Embed(description=" ".join(text), color=discord.Color.blue()))
 
     @commands.command(name="ping")
     async def _ping(self, ctx):

@@ -1,7 +1,7 @@
 import json
 from discord.ext import commands
 from utils import prefix
-from cogs import ready, asign_role, basic_commands
+from cogs import ready, asign_role, basic_commands, eval
 
 with open('secret.json', 'r') as fp:
     data = json.load(fp)
@@ -13,6 +13,7 @@ class Setup:
         self.bot.add_cog(ready.Ready(self.bot))
         self.bot.add_cog(asign_role.Role(self.bot))
         self.bot.add_cog(basic_commands.Basic(self.bot))
+        self.bot.add_cog(eval.Eval(self.bot))
         self.bot.run(data['token'])
 
 
