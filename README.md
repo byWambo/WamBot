@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c2d34361f9e0418ea09449026dc47cbb)](https://app.codacy.com/app/byWambo/WamBot?utm_source=github.com&utm_medium=referral&utm_content=byWambo/WamBot&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub](https://img.shields.io/github/license/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/byWambo/WamBot.svg?style=for-the-badge)](https://github.com/byWambo/WamBot/pulls)
