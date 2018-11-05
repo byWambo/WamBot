@@ -11,6 +11,7 @@ class Prefix:
 
     @commands.group()
     async def prefix(self, ctx):
+        """Custom Server Prefix System"""
         if ctx.invoked_subcommand is None:
             return
 
@@ -31,6 +32,7 @@ class Prefix:
     @commands.guild_only()
     @commands.has_permissions(manage_guild=True)
     async def _remove(self, ctx, *args):
+        """Removes a Prefix of the guild"""
         if args in self.forbidden:
             return await ctx.send("You can't remove this prefix!")
 
@@ -40,4 +42,5 @@ class Prefix:
     @commands.guild_only()
     @commands.has_permissions(manage_guild=True)
     async def _list(self, ctx):
+        """Shows all Prefixes of the guild"""
         return await ctx.send(f'These prefixes are on the Guild active: `' + " ".join(i for i in prefix.Prefix.get_prefix(ctx.guild.id, self.bot)) + "`")
