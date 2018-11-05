@@ -26,23 +26,3 @@ class Ping:
             color=discord.Color.blue()
         )
         return embed
-
-
-class Eval:
-
-    @staticmethod
-    def get(input, output):
-        embed = discord.Embed(
-            color=discord.Color.blue()
-        )
-        embed.add_field(
-            name="__Input__",
-            value=f"```py\n{input}```",
-            inline=False
-        )
-        embed.add_field(
-            name="__Output__",
-            value=f"```py\n{output}```",
-            inline=False
-        )
-        return embed
