@@ -9,8 +9,16 @@ class Prefix:
         self.forbidden = ["<@508652107172151306> ",
                           "<@!508652107172151306> "]
 
-    @commands.command(name='add')
+    @commands.group()
+    async def prefix(self, ctx):
+        if ctx.invoked_subcommand is None:
+            return
+
+    @prefix.command(name='add')
+    @commands.guild_only()
+    @commands.has_permissions(manage_guild=True)
     async def _add(self, ctx, *args):
+        """Adds a Prefix to the guild"""
         if not args:
             return await ctx.send("This command requires an argument.")
 
@@ -19,13 +27,17 @@ class Prefix:
 
         return await prefix.Prefix.add_prefix(ctx, ctx.guild.id, args)
 
-    @commands.command(name='remove')
+    @prefix.command(name='remove')
+    @commands.guild_only()
+    @commands.has_permissions(manage_guild=True)
     async def _remove(self, ctx, *args):
         if args in self.forbidden:
             return await ctx.send("You can't remove this prefix!")
 
         return await prefix.Prefix.remove_prefix(ctx, ctx.guild.id, args)
 
-    @commands.command(name='list')
+    @prefix.command(name='list')
+    @commands.guild_only()
+    @commands.has_permissions(manage_guild=True)
     async def _list(self, ctx):
         return await ctx.send(f'These prefixes are on the Guild active: `' + " ".join(i for i in prefix.Prefix.get_prefix(ctx.guild.id, self.bot)) + "`")

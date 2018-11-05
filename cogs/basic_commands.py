@@ -11,10 +11,12 @@ class Basic:
 
     @commands.command()
     async def guild(self, ctx):
+        """Sends information about this guild."""
         await ctx.send(embed=embeds.Guild.get(ctx))
 
     @commands.command()
     async def say(self, ctx, *text):
+        """Says something."""
         if not text:
             return await ctx.send("This command requires arguments on what to say.")
         await ctx.send(embed=discord.Embed(description=" ".join(text), color=discord.Color.blue()))
