@@ -13,13 +13,14 @@ class Eval:
     async def _eval(self, ctx):
         text = ctx.message.content
         try:
-
             begin = text.find('```py')
             code = text[begin + 6:].rstrip('```')
             if 'import' in code:
                 return await ctx.send('YO! YOU BAD BOIIIII!')
             elif 'bot' in code:
                 return await ctx.send('Sorry bro, no d.py in Eval')
+            elif 'while' in code:
+                return await ctx.send('BAD BOI')
 
             response = str(evaluator.eval_py_out(code)[0].decode('utf-8'))
 
