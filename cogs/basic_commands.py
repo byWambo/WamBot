@@ -1,5 +1,6 @@
 import subprocess
 import discord
+from datetime import datetime
 from discord.ext import commands
 from utils import embeds
 
@@ -35,3 +36,14 @@ class Basic:
             await ctx.send(embed=embeds.Ping.get(result[begin + 2:end]))
         except IndexError:
             await ctx.send(embed=embeds.Ping.get('Host down!'))
+
+    @commands.command(name="uptime")
+    async def _uptime(self, ctx):
+        """Tells you the uptime of the bot"""
+        delta_uptime = datetime.utcnow() - self.bot.launch
+        hours, remainder = divmod(int(delta_uptime.total_seconds()), 3600)
+        minutes, seconds = divmod(remainder, 60)
+        days, hours = divmod(hours, 24)
+
+        return await ctx.send(f"{days} days, {hours} hours, {minutes} minutes, {seconds} seconds")
+
