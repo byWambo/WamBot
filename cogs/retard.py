@@ -34,9 +34,9 @@ class Retard:
                        f"<http://lmgtfy.com/?q={query}>")
 
     @commands.command(name="yt")
-    async def yt(self, ctx, *text):
+    async def yt(self, ctx, *, text):
         """Searches something on YouTube"""
         if not text:
             return await ctx.send("This command requires arguments.")
-        query = quote(" ".join(text))
+        query = quote("".join(text))
         await ctx.send(f"Here the query. https://www.youtube.com/results?search_query={query}")
