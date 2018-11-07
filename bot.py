@@ -7,10 +7,6 @@ from cogs import ready, asign_role, basic_commands, prefix as pre
 with open('secret.json', 'r') as fp:
     data = json.load(fp)
 
-cogs = [
-    ''
-]
-
 
 class WamBot(commands.AutoShardedBot):
     """This is a subclass, for more things."""
