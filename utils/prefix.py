@@ -6,7 +6,7 @@ class Prefix:
 
     def set(self, bot, message):
         try:
-            prefixes = ['sudo ']
+            prefixes = []
             prefixes.extend(self.get_prefix(message.guild.id, bot))
             return commands.when_mentioned_or(*prefixes)(bot, message)
         except AttributeError:
