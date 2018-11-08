@@ -22,15 +22,10 @@ class WamBot(commands.AutoShardedBot):
         self.version = '0.0.1a'
 
 
-class Setup:
-    def __init__(self):
-        self.bot = WamBot()
-        self.bot.add_cog(ready.Ready(self.bot))
-        self.bot.add_cog(asign_role.Role(self.bot))
-        self.bot.add_cog(basic_commands.Basic(self.bot))
-        self.bot.add_cog(pre.Prefix(self.bot))
-        self.bot.add_cog(retard.Retard(self.bot))
-        self.bot.run(data['token'])
-
-
-Setup()
+bot = WamBot()
+bot.add_cog(ready.Ready(bot))
+bot.add_cog(asign_role.Role(bot))
+bot.add_cog(basic_commands.Basic(bot))
+bot.add_cog(pre.Prefix(bot))
+bot.add_cog(retard.Retard(bot))
+bot.run(data['token'])

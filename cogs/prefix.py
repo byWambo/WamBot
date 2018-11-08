@@ -6,8 +6,7 @@ class Prefix:
 
     def __init__(self, bot):
         self.bot = bot
-        self.forbidden = ["<@508652107172151306> ",
-                          "<@!508652107172151306> "]
+        self.forbidden = None
 
     @commands.group()
     async def prefix(self, ctx):
@@ -33,6 +32,9 @@ class Prefix:
     @commands.has_permissions(manage_guild=True)
     async def _remove(self, ctx, *args):
         """Removes a Prefix of the guild"""
+        self.forbidden = [f"<@{self.bot.user.id}> ",
+                          f"<@!{self.bot.user.id}> "]
+
         if args in self.forbidden:
             return await ctx.send("You can't remove this prefix!")
 
