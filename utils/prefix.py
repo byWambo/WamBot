@@ -5,9 +5,12 @@ import json
 class Prefix:
 
     def set(self, bot, message):
-        prefixes = ['sudo ']
-        prefixes.extend(self.get_prefix(message.guild.id, bot))
-        return commands.when_mentioned_or(*prefixes)(bot, message)
+        try:
+            prefixes = ['sudo ']
+            prefixes.extend(self.get_prefix(message.guild.id, bot))
+            return commands.when_mentioned_or(*prefixes)(bot, message)
+        except AttributeError:
+            return commands.when_mentioned_or('sudo')(bot, message)
 
     @staticmethod
     def get_prefix(guild_id, bot):
