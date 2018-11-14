@@ -1,8 +1,10 @@
 import json
+import threading
+
 from datetime import datetime
 from discord.ext import commands
 from utils import prefix
-from cogs import ready, asign_role, basic_commands, prefix as pre, retard, eval
+from cogs import ready, asign_role, basic_commands, prefix as pre, retard, eval, music
 
 with open('secret.json', 'r') as fp:
     data = json.load(fp)
@@ -29,4 +31,5 @@ bot.add_cog(basic_commands.Basic(bot))
 bot.add_cog(pre.Prefix(bot))
 bot.add_cog(retard.Retard(bot))
 bot.add_cog(eval.Eval(bot))
+bot.add_cog(music.Music(bot, data['pw']))
 bot.run(data['token'])
